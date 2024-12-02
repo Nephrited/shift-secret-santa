@@ -14,7 +14,7 @@ function InlineSelect({options, onSelect}: {
     };
 
     return (
-        <select value={selectedValue} onChange={handleChange}>
+        <select value={selectedValue} onChange={handleChange} className="bg-white dark:bg-gray-800 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-600 rounded-md px-3 py-2">
             <option value={undefined}>--select an option---</option>
             {options.map((option) => (
                 <option key={option.value} value={option.value}>

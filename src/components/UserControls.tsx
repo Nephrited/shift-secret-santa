@@ -23,6 +23,7 @@ const santaChoices = [{text: "art", value: SantaChoice.ART}, {
 }, {text: "either art or a wishlist item", value: SantaChoice.EITHER}];
 const backupChoices = [{text: "do", value: BackupChoice.DO}, {text: "do not", value: BackupChoice.DONOT}];
 
+const paragraphStyle = "mb-4";
 export const buttonStyles = "my-2 rounded p-3 bg-purple-700 text-center text-white hover:bg-purple-400 transition-colors duration-300 ease-in-out w-full disabled:bg-gray-400 disabled:cursor-not-allowed";
 
 export const UserControls = () => {
@@ -93,19 +94,19 @@ export const UserControls = () => {
                     <div>
                         <img src={session.user?.image || undefined} alt={session.user?.name || "Unknown User"}
                              className="rounded-full w-12 h-12"/>
-                        <p className="text-center">Hi {session.user?.name}!</p>
+                        <p className="text-center mb-2">Hi {session.user?.name}!</p>
                         <div>You are not currently registered for Secret Santa!</div>
-                        <div>Joining Secret Santa:
-                            <p>I, {session.user?.name}, wish to register to receive <InlineSelect options={santaChoices}
+                        <div><h2 className="text-l font-bold mb-2 mt-1">Joining Secret Santa:</h2>
+                            <p className={paragraphStyle}>I, {session.user?.name}, wish to register to receive <InlineSelect options={santaChoices}
                                                                                                   onSelect={onReceiveSelect}/>,
                                 and to give <InlineSelect options={santaChoices} onSelect={onGiveSelect}/>.</p>
-                            <p>I understand that registering is a commitment to complete my artwork or provide proof of
+                            <p className={paragraphStyle}>I understand that registering is a commitment to complete my artwork or provide proof of
                                 a wishlist item being purchased before the cutoff date of the 24th of December.</p>
-                            <p>I <InlineSelect options={backupChoices} onSelect={onBackupSelect}></InlineSelect> wish to
+                            <p className={paragraphStyle}>I <InlineSelect options={backupChoices} onSelect={onBackupSelect}></InlineSelect> wish to
                                 register as a backup gift giver, in case another person is unable to provide their gift.
                             </p>
-                            <button className={clsx(buttonStyles, isSubmitting ? 'animate-spin' : '')} onClick={() => submitUserRegistration()}
-                                    disabled={!selectedGiving || !selectedReceiving || !selectedBackup}>{!isSubmitting ? "Register" : "Registering..."}</button>
+                            <button className={clsx(buttonStyles)} onClick={() => submitUserRegistration()}
+                                    disabled={isSubmitting || !selectedGiving || !selectedReceiving || !selectedBackup}>{!isSubmitting ? "Register" : "Registering..."}</button>
                         </div>
                     </div>
                     <button className={clsx(buttonStyles)} onClick={() => signOut()}>

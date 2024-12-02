@@ -9,7 +9,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center h-screen">
                 <main className="flex flex-col gap-8 row-start-2 items-center pl-2 pr-2 max-w-lg">
                     <h1 className="text-2xl font-bold mt-2">
-                        Shift Secret Santa
+                        Shift Secret Santa 2024!
                     </h1>
                     <UserControls/>
                 </main>

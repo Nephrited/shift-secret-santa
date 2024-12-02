@@ -6,7 +6,7 @@ import {SessionProvider} from "next-auth/react";
 export default function Home() {
     return (
         <SessionProvider>
-            <div className="flex flex-col items-center justify-center h-screen">
+            <div className="flex flex-col items-center justify-center h-screen" style={{justifyContent: "safe center"}}>
                 <main className="flex flex-col gap-8 row-start-2 items-center pl-2 pr-2 max-w-lg">
                     <h1 className="text-2xl font-bold mt-2">
                         Shift Secret Santa 2024!

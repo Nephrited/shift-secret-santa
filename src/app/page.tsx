@@ -15,7 +15,7 @@ export default function Home() {
                 </main>
                 <section className="m-10">
                     Welcome to the Shift Secret Santa (SSS) event! <br/>
-                    This year we have a custom app. It's ugly. It's probably buggy! I'm still working on it! But it works! <br/>
+                    This year we have a custom app. It&#39;s ugly. It&#39;s probably buggy! I&#39;m still working on it! But it works! <br/>
                     Users can register to give and receive either art, wishlist items, or both! <br/>
                     <h2 className="text-xl pb-2 pt-1">
                         Rules:
@@ -24,10 +24,10 @@ export default function Home() {
                         <li>Users must register both to give and receive a gift.</li>
                         <li>Users may supply a character reference if they wish to receive art gifts.</li>
                         <li>Users may supply an Amazon or Steam wishlist if they wish to receive purchased items.</li>
-                        <li>Wishlist item purchases are limited to £30 GBP max value.</li>
-                        <li>Signups end on the 8th of December 2024.</li>
-                        <li>Art gifts must be uploaded by the 24th of December 2024, UK time.</li>
-                        <li>Proof of shipping or delivery of wishlist items must be sent directly to Nephi (nephrited) via Discord by the 14th of December, 2024, UK time.</li>
+                        <li>Wishlist item purchases are limited to <em>£30 GBP max value.</em></li>
+                        <li>Signups end on the <em>8th of December 2024.</em></li>
+                        <li>Art gifts must be uploaded by the <em>24th of December 2024, UK time.</em></li>
+                        <li>Proof of shipping or delivery of wishlist items must be sent directly to Nephi (nephrited) via Discord by the <em>14th of December, 2024, UK time.</em></li>
                         <li>Users must not contact their assigned recipient! Questions should be proxied through Weh (notacatbot).</li>
                     </ol>
                     <h2 className="text-xl pb-2 pt-1">

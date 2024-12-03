@@ -3,7 +3,7 @@
 import {put, list} from "@vercel/blob";
 
 export async function registerUser(data: { username: string, receiving: string, giving: string, backup: string }) {
-    await put('users2024/' + data.username, JSON.stringify(data), {access: 'public'});
+    await put('users2024/' + data.username + '.json', JSON.stringify(data), {access: 'public'});
     console.log('Registered user ' + data.username);
     return;
 }
